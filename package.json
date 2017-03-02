@@ -1,0 +1,19 @@
+{
+  "name": "1stdibs-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chris_king_webdriver_test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cxk280/1stdibs-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cxk280/1stdibs-test/issues"
+  },
+  "homepage": "https://github.com/cxk280/1stdibs-test#readme"
+}
