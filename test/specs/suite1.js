@@ -1,7 +1,7 @@
-let webdriverio = require('webdriverio');
-let should      = require('should');
-let chai        = require('chai');
-let assert      = chai.assert;
+const webdriverio = require('webdriverio');
+const should      = require('should');
+const chai        = require('chai');
+const assert      = chai.assert;
 
 describe('my webdriverio tests', function(){
 
