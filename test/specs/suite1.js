@@ -21,42 +21,52 @@ describe('suite 1 tests', function(){
     it('Furniture test',function() {
         return client
             .url('https://www.1stdibs.com/')
+            .click('#mainNavLinkLogIn')
+            .pause(10000)
+            .setValue('#login_email', '1stdibstest@gmail.com');
+            .setValue('#login_password', 's!HNK6N776&9Rju');
+            .submitForm('.auth-modal-form auth-modal-login')
+            .pause(10000)
             .click('#mainNavLinkFurniture')
             .pause(10000)
             .getText('.browse-header-title').then(function (text) {
                 expect(text).to.include('Furniture');
-            });
+            })
+            .click('#username')
+            .pause(1000)
+            .click('#logout')
+            .pause(10000)
     });
 
-    it('Fine Art test',function() {
-        return client
-            .url('https://www.1stdibs.com/')
-            .click('#mainNavLinkFineArt')
-            .pause(10000)
-            .getText('.browse-header-title').then(function (text) {
-                expect(text).to.include('Fine Art');
-            });
-    });
+    // it('Fine Art test',function() {
+    //     return client
+    //         .url('https://www.1stdibs.com/')
+    //         .click('#mainNavLinkFineArt')
+    //         .pause(10000)
+    //         .getText('.browse-header-title').then(function (text) {
+    //             expect(text).to.include('Fine Art');
+    //         });
+    // });
 
-    it('Jewelry test',function() {
-        return client
-            .url('https://www.1stdibs.com/')
-            .click('#mainNavLinkJewelryWatches')
-            .pause(10000)
-            .getText('.browse-header-title').then(function (text) {
-                expect(text).to.include('Jewelry & Watches');
-            });
-    });
+    // it('Jewelry test',function() {
+    //     return client
+    //         .url('https://www.1stdibs.com/')
+    //         .click('#mainNavLinkJewelryWatches')
+    //         .pause(10000)
+    //         .getText('.browse-header-title').then(function (text) {
+    //             expect(text).to.include('Jewelry & Watches');
+    //         });
+    // });
 
-    it('Fashion test',function() {
-        return client
-            .url('https://www.1stdibs.com/')
-            .click('#mainNavLinkFashion')
-            .pause(10000)
-            .getText('.browse-header-title').then(function (text) {
-                expect(text).to.include('Fashion');
-            });
-    });
+    // it('Fashion test',function() {
+    //     return client
+    //         .url('https://www.1stdibs.com/')
+    //         .click('#mainNavLinkFashion')
+    //         .pause(10000)
+    //         .getText('.browse-header-title').then(function (text) {
+    //             expect(text).to.include('Fashion');
+    //         });
+    // });
 
     after(function() {
         return client.end();
