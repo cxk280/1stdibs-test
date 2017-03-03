@@ -20,7 +20,7 @@ describe('suite 1 tests', function(){
             //more methods here
             .click('#mainNavLinkFurniture').then(function (result) {
                 expect('.browse-header-title').to.equal('Furniture');
-            }
+            });
     });
 
     it('Fine Art test',function() {
@@ -29,7 +29,7 @@ describe('suite 1 tests', function(){
             //more methods here
             .click('#mainNavLinkFineArt').then(function (result) {
                 expect('.browse-header-title').to.equal('Fine Art');
-            }
+            });
     });
 
     it('Jewelry test',function() {
@@ -38,7 +38,7 @@ describe('suite 1 tests', function(){
             //more methods here
             .click('#mainNavLinkJewelryWatches').then(function (result) {
                 expect('.browse-header-title').to.equal('Jewelry & Watches');
-            }
+            });
     });
 
     it('Fashion test',function() {
@@ -47,7 +47,7 @@ describe('suite 1 tests', function(){
             //more methods here
             .click('#mainNavLinkFashion').then(function (result) {
                 expect('.browse-header-title').to.equal('Fashion');
-            }
+            });
     });
 
     after(function() {
