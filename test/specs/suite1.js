@@ -23,8 +23,8 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
             .click('#mainNavLinkLogIn')
             .pause(10000)
-            .setValue('#login_email', '1stdibstest@gmail.com');
-            .setValue('#login_password', 's!HNK6N776&9Rju');
+            .setValue('#login_email', '1stdibstest@gmail.com')
+            .setValue('#login_password', 's!HNK6N776&9Rju')
             .submitForm('.auth-modal-form auth-modal-login')
             .pause(10000)
             .click('#mainNavLinkFurniture')
