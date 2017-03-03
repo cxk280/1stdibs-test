@@ -21,7 +21,8 @@ describe('suite 1 tests', function(){
     it('Furniture test',function() {
         return client
             .url('https://www.1stdibs.com/')
-            .click('#mainNavLinkLogIn')
+            .moveToObject('#mainNavLinkLogIn')
+            .click('#login')
             .pause(10000)
             .setValue('#login_email', '1stdibstest@gmail.com')
             .setValue('#login_password', 's!HNK6N776&9Rju')
