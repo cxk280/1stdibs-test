@@ -16,6 +16,8 @@ describe('suite 1 tests', function(){
             return client.init();
     });
 
+    //Create test login, save info in environmental variables, and have each test login beforehand so the modal doesn't pop up then logout afterward
+
     it('Furniture test',function() {
         return client
             .url('https://www.1stdibs.com/')
