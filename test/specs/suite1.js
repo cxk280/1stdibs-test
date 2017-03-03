@@ -15,7 +15,7 @@ describe('suite 1 tests', function(){
 
     it('Furniture test',function() {
         return client
-            // .url('https://github.com/')
+            .url('https://www.1stdibs.com/')
             // .getElementSize('.header-logo-invertocat .octicon.octicon-mark-github').then(function (result) {
             //     assert.strictEqual(result.height , 32);
             //     assert.strictEqual(result.width, 32);
@@ -30,7 +30,7 @@ describe('suite 1 tests', function(){
 
     it('Fine Art test',function() {
         return client
-            // .url('https://github.com/')
+            .url('https://www.1stdibs.com/')
             // .getElementSize('.header-logo-invertocat .octicon.octicon-mark-github').then(function (result) {
             //     assert.strictEqual(result.height , 32);
             //     assert.strictEqual(result.width, 32);
@@ -45,7 +45,7 @@ describe('suite 1 tests', function(){
 
     it('Jewelry test',function() {
         return client
-            // .url('https://github.com/')
+            .url('https://www.1stdibs.com/')
             // .getElementSize('.header-logo-invertocat .octicon.octicon-mark-github').then(function (result) {
             //     assert.strictEqual(result.height , 32);
             //     assert.strictEqual(result.width, 32);
@@ -60,7 +60,7 @@ describe('suite 1 tests', function(){
 
     it('Fashion test',function() {
         return client
-            // .url('https://github.com/')
+            .url('https://www.1stdibs.com/')
             // .getElementSize('.header-logo-invertocat .octicon.octicon-mark-github').then(function (result) {
             //     assert.strictEqual(result.height , 32);
             //     assert.strictEqual(result.width, 32);
