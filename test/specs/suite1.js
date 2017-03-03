@@ -23,8 +23,8 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
             .click("a[data-tn='global-nav-item-link-furniture']")
             .pause(10000)
-            .click('#header')
-            .pause(4000)
+            // .click('#header')
+            // .pause(4000)
             .getText('.browse-header-title').then(function (text) {
                 expect(text).to.include('Furniture');
             })
@@ -35,8 +35,8 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
             .click("a[data-tn='global-nav-item-link-fine art']")
             .pause(10000)
-            .click('#header')
-            .pause(4000)
+            // .click('#header')
+            // .pause(4000)
             .getText('.browse-header-title').then(function (text) {
                 expect(text).to.include('Fine Art');
             });
@@ -47,8 +47,8 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
             .click("a[data-tn='global-nav-item-link-jewelry & watches']")
             .pause(10000)
-            .click('#header')
-            .pause(4000)
+            // .click('#header')
+            // .pause(4000)
             .getText('.browse-header-title').then(function (text) {
                 expect(text).to.include('Jewelry & Watches');
             });
@@ -59,8 +59,8 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
             .click("a[data-tn='global-nav-item-link-fashion']")
             .pause(10000)
-            .click('#header')
-            .pause(4000)
+            // .click('#header')
+            // .pause(4000)
             .getText('.browse-header-title').then(function (text) {
                 expect(text).to.include('Fashion');
             });
