@@ -19,7 +19,8 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
             //more methods here
             .click('#mainNavLinkFurniture').then(function (result) {
-                expect('.browse-header-title').to.equal('Furniture');
+                // expect('.browse-header-title').to.equal('Furniture');
+                expect('.browse-header-title').to.have.property('textContent','Furniture');
             });
     });
 
