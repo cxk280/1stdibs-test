@@ -13,18 +13,16 @@ describe('suite 1 tests', function(){
 
     before(function(){
             client = webdriverio.remote({ desiredCapabilities: {browserName: 'firefox'} });
+            client.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             return client.init();
     });
 
     it('Furniture test',function() {
         return client
         .url('https://www.1stdibs.com/')
-        // .click('#mainNavLinkFurniture')
-        // .getText('.browse-header-title').then(function (title) {
-        //     expect(text).to.equal('Furniture');
-        // });
-        .getText('.user-menu-nav-item-link').then(function (text) {
-            expect(text).to.include('Log In');
+        .click('#mainNavLinkFurniture')
+        .getText('.browse-header-title').then(function (text) {
+            expect(text).to.include('Furniture');
         });
     });
 
