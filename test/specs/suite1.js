@@ -13,7 +13,6 @@ describe('suite 1 tests', function(){
 
     before(function(){
             client = webdriverio.remote({ desiredCapabilities: {browserName: 'firefox'} });
-            client.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             return client.init();
     });
 
@@ -21,6 +20,7 @@ describe('suite 1 tests', function(){
         return client
         .url('https://www.1stdibs.com/')
         .click('#mainNavLinkFurniture')
+        .pause(15000)
         .getText('.browse-header-title').then(function (text) {
             expect(text).to.include('Furniture');
         });
