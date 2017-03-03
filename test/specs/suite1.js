@@ -19,6 +19,7 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
             //more methods here
             .click('#mainNavLinkFurniture')
+            .expect('.browse-header-title').to.equal('Furniture')
     });
 
     it('Fine Art test',function() {
@@ -26,6 +27,7 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
             //more methods here
             .click('#mainNavLinkFineArt')
+            .expect('.browse-header-title').to.equal('Fine Art')
     });
 
     it('Jewelry test',function() {
@@ -33,6 +35,7 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
             //more methods here
             .click('#mainNavLinkJewelryWatches')
+            .expect('.browse-header-title').to.equal('Jewelry & Watches')
     });
 
     it('Fashion test',function() {
@@ -40,6 +43,7 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
             //more methods here
             .click('#mainNavLinkFashion')
+            .expect('.browse-header-title').to.equal('Fashion')
     });
 
     after(function() {
