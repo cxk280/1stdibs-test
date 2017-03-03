@@ -28,8 +28,8 @@ describe('suite 1 tests', function(){
             .pause(5000)
             .setValue('#login_password','s!HNK6N776&9Rju')
             .pause(5000)
-            // .click("button[data-tn='auth-modal-login-submit-button']")
-            // .pause(3000)
+            .click("button[data-tn='auth-modal-login-submit-button']")
+            .pause(5000)
             // .click("a[data-tn='global-nav-item-link-furniture']")
             // .pause(10000)
             // .getText('.browse-header-title').then(function (text) {
