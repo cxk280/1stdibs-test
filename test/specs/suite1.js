@@ -1,5 +1,6 @@
 const webdriverio = require('webdriverio');
 const chai        = require('chai');
+const chaijquery  = require('chai-jquery');
 const should      = chai.should;
 const expect      = chai.expect;
 // const assert      = chai.assert;
@@ -19,8 +20,7 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
             //more methods here
             .click('#mainNavLinkFurniture').then(function (result) {
-                // expect('.browse-header-title').to.equal('Furniture');
-                expect('.browse-header-title').to.have.property('textContent','Furniture');
+                expect('.browse-header-title').to.equal('Furniture');
             });
     });
 
