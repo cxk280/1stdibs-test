@@ -18,24 +18,28 @@ describe('suite 1 tests', function(){
         return client
             .url('https://www.1stdibs.com/')
             //more methods here
+            .click('#mainNavLinkFurniture')
     });
 
     it('Fine Art test',function() {
         return client
             .url('https://www.1stdibs.com/')
             //more methods here
+            .click('#mainNavLinkFineArt')
     });
 
     it('Jewelry test',function() {
         return client
             .url('https://www.1stdibs.com/')
             //more methods here
+            .click('#mainNavLinkJewelryWatches')
     });
 
     it('Fashion test',function() {
         return client
             .url('https://www.1stdibs.com/')
             //more methods here
+            .click('#mainNavLinkFashion')
     });
 
     after(function() {
