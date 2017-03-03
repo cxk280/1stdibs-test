@@ -30,11 +30,11 @@ describe('suite 1 tests', function(){
             .pause(5000)
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(5000)
-            // .click("a[data-tn='global-nav-item-link-furniture']")
-            // .pause(10000)
-            // .getText('.browse-header-title').then(function (text) {
-            //     expect(text).to.include('Furniture');
-            // })
+            .click("a[data-tn='global-nav-item-link-furniture']")
+            .pause(10000)
+            .getText('.browse-header-title').then(function (text) {
+                expect(text).to.include('Furniture');
+            })
     });
 
     // it('Fine Art test',function() {
