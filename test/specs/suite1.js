@@ -18,19 +18,14 @@ describe('suite 1 tests', function(){
 
     it('Furniture test',function() {
         return client
-            // .url('https://www.1stdibs.com/').then(function (result) {
-            // //more methods here
-            //     // expect($('#mainNavLinkFurniture')).to.have.class('global-nav-item');
-            //     expect($('#mainNavLinkFurniture')).to.exist;
-            // });
-
-            .url('https://www.1stdibs.com/')
-
-            .click('#mainNavLinkFurniture').then(function (result) {
-                // expect('.browse-header-title').to.equal('Furniture');
-                // expect($('.browse-header-title')).to.have.text('Furniture');
-                expect($('.browse-header-title')).to.exist;
-            });
+        .url('https://www.1stdibs.com/')
+        // .click('#mainNavLinkFurniture')
+        // .getText('.browse-header-title').then(function (title) {
+        //     expect(text).to.equal('Furniture');
+        // });
+        .getText('.user-menu-nav-item-link').then(function (text) {
+            expect(text).to.include('Log In');
+        });
     });
 
     // it('Fine Art test',function() {
