@@ -20,7 +20,7 @@ describe('suite 1 tests', function(){
         return client
         .url('https://www.1stdibs.com/')
         .click('#mainNavLinkFurniture')
-        .pause(5000)
+        .pause(10000)
         .getText('.browse-header-title').then(function (text) {
             expect(text).to.include('Furniture');
         });
