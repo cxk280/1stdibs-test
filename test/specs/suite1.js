@@ -18,32 +18,36 @@ describe('suite 1 tests', function(){
         return client
             .url('https://www.1stdibs.com/')
             //more methods here
-            .click('#mainNavLinkFurniture')
-            .expect('.browse-header-title').to.equal('Furniture')
+            .click('#mainNavLinkFurniture').then(function (result) {
+                expect('.browse-header-title').to.equal('Furniture');
+            }
     });
 
     it('Fine Art test',function() {
         return client
             .url('https://www.1stdibs.com/')
             //more methods here
-            .click('#mainNavLinkFineArt')
-            .expect('.browse-header-title').to.equal('Fine Art')
+            .click('#mainNavLinkFineArt').then(function (result) {
+                expect('.browse-header-title').to.equal('Fine Art');
+            }
     });
 
     it('Jewelry test',function() {
         return client
             .url('https://www.1stdibs.com/')
             //more methods here
-            .click('#mainNavLinkJewelryWatches')
-            .expect('.browse-header-title').to.equal('Jewelry & Watches')
+            .click('#mainNavLinkJewelryWatches').then(function (result) {
+                expect('.browse-header-title').to.equal('Jewelry & Watches');
+            }
     });
 
     it('Fashion test',function() {
         return client
             .url('https://www.1stdibs.com/')
             //more methods here
-            .click('#mainNavLinkFashion')
-            .expect('.browse-header-title').to.equal('Fashion')
+            .click('#mainNavLinkFashion').then(function (result) {
+                expect('.browse-header-title').to.equal('Fashion');
+            }
     });
 
     after(function() {
