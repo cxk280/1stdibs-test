@@ -25,14 +25,9 @@ describe('suite 1 tests', function(){
             .setValue('#login_password',process.env.test_password)
             .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
             .click("button[data-tn='auth-modal-login-submit-button']")
-            .pause(5000)
-            .waitForVisible("a[data-tn='global-nav-item-link-furniture']", 10000)
-            .click("a[data-tn='global-nav-item-link-furniture']")
-            .waitForVisible('.browse-header-title', 10000)
-            .getText('.browse-header-title').then(function (text) {
-                expect(text).to.include('Furniture');
-            })
             .pause(10000)
+
+
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
             .pause(10000)
@@ -54,13 +49,9 @@ describe('suite 1 tests', function(){
             .setValue('#login_password',process.env.test_password)
             .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
             .click("button[data-tn='auth-modal-login-submit-button']")
-            .pause(5000)
-            .waitForVisible("a[data-tn='global-nav-item-link-fine art']", 10000)
-            .click("a[data-tn='global-nav-item-link-fine art']")
-            .waitForVisible('.browse-header-title', 10000)
-            .getText('.browse-header-title').then(function (text) {
-                expect(text).to.include('Fine Art');
-            })
+            .pause(10000)
+
+
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
             .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
@@ -82,13 +73,9 @@ describe('suite 1 tests', function(){
             .setValue('#login_password',process.env.test_password)
             .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
             .click("button[data-tn='auth-modal-login-submit-button']")
-            .pause(5000)
-            .waitForVisible("a[data-tn='global-nav-item-link-jewelry & watches']", 10000)
-            .click("a[data-tn='global-nav-item-link-jewelry & watches']")
-            .waitForVisible('.browse-header-title', 10000)
-            .getText('.browse-header-title').then(function (text) {
-                expect(text).to.include('Jewelry & Watches');
-            })
+            .pause(10000)
+
+
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
             .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
@@ -110,13 +97,9 @@ describe('suite 1 tests', function(){
             .setValue('#login_password',process.env.test_password)
             .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
             .click("button[data-tn='auth-modal-login-submit-button']")
-            .pause(5000)
-            .waitForVisible("a[data-tn='global-nav-item-link-fashion']", 10000)
-            .click("a[data-tn='global-nav-item-link-fashion']")
-            .waitForVisible('.browse-header-title', 10000)
-            .getText('.browse-header-title').then(function (text) {
-                expect(text).to.include('Fashion');
-            })
+            .pause(10000)
+
+
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
             .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
