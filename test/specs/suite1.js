@@ -24,7 +24,6 @@ describe('suite 1 tests', function(){
             .waitForVisible('#login_email', 10000)
             .setValue('#login_email','1stdibstest@gmail.com')
             .setValue('#login_password','s!HNK6N776&9Rju')
-            .setValue('#login_password','s!HNK6N776&9Rju')
             .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(5000)
