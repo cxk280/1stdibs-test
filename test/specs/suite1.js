@@ -98,31 +98,32 @@ describe('suite 1 tests', function(){
             .pause(5000)
     });
 
-    // it('Fashion test',function() {
-    //     return client
-    //         .url('https://www.1stdibs.com/')
-    //         .pause(5000)
-    //         .click("span[data-action='login']")
-    //         .pause(10000)
-    //         .setValue('#login_email','1stdibstest@gmail.com')
-    //         .pause(5000)
-    //         .setValue('#login_password','s!HNK6N776&9Rju')
-    //         .pause(5000)
-    //         .click("button[data-tn='auth-modal-login-submit-button']")
-    //         .pause(5000)
-    //         .click("a[data-tn='global-nav-item-link-fashion']")
-    //         .pause(10000)
-    //         .getText('.browse-header-title').then(function (text) {
-    //             expect(text).to.include('Fashion');
-    //         })
-    //         .pause(10000)
-    //         .click('.AccountNav-style__accountIcon__cVYjZ')
-    //         .pause(10000)
-    //         .click("span[data-tn='sub-nav-list-item-link-logout']")
-    //         .pause(5000)
-    //         .url('https://www.1stdibs.com/')
-    //         .pause(5000)
-    // });
+    it('Fashion test',function() {
+        return client
+            .url('https://www.1stdibs.com/')
+            .waitForVisible("span[data-action='login']", 10000)
+            .click("span[data-action='login']")
+            .waitForVisible('#login_email', 10000)
+            .setValue('#login_email','1stdibstest@gmail.com')
+            .waitForVisible('#login_password', 10000)
+            .setValue('#login_password','s!HNK6N776&9Rju')
+            .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
+            .click("button[data-tn='auth-modal-login-submit-button']")
+            .pause(5000)
+            .waitForVisible("a[data-tn='global-nav-item-link-fashion']", 10000)
+            .click("a[data-tn='global-nav-item-link-fashion']")
+            .waitForVisible('.browse-header-title', 10000)
+            .getText('.browse-header-title').then(function (text) {
+                expect(text).to.include('Fashion');
+            })
+            .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
+            .click('.AccountNav-style__accountIcon__cVYjZ')
+            .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
+            .click("span[data-tn='sub-nav-list-item-link-logout']")
+            .pause(5000)
+            .url('https://www.1stdibs.com/')
+            .pause(5000)
+    });
 
     after(function() {
         return client.end();
