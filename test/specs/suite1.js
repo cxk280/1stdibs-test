@@ -1,3 +1,4 @@
+const dotenv      = require('dotenv').config();
 const webdriverio = require('webdriverio');
 const jquery      = require('jquery');
 const chai        = require('chai');
@@ -22,8 +23,10 @@ describe('suite 1 tests', function(){
             .waitForVisible("span[data-action='login']", 10000)
             .click("span[data-action='login']")
             .waitForVisible('#login_email', 10000)
-            .setValue('#login_email','1stdibstest@gmail.com')
-            .setValue('#login_password','s!HNK6N776&9Rju')
+            // .setValue('#login_email','1stdibstest@gmail.com')
+            .setValue('#login_email',process.env.test_email)
+            // .setValue('#login_password','s!HNK6N776&9Rju')
+            .setValue('#login_password',process.env.test_password)
             .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(5000)
