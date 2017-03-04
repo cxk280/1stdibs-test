@@ -16,6 +16,8 @@ describe('suite 1 tests', function(){
 
     it('Oak Wood Table test',function() {
         return client
+
+            //Login
             .url('https://www.1stdibs.com/')
             .waitForVisible("span[data-action='login']", 10000)
             .click("span[data-action='login']")
@@ -27,6 +29,7 @@ describe('suite 1 tests', function(){
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(10000)
 
+            //Search
             .setValue("input[data-tn='global-header-search-input']","Oak Wood Table")
             .click("div[class='SearchBar-style__icon__umm_r']")
             .pause(7000)
@@ -34,6 +37,7 @@ describe('suite 1 tests', function(){
                 expect(text).to.equal('"Oak Wood Table"');
             })
 
+            //Logout
             .pause(10000)
             .url('https://www.1stdibs.com/')
             .pause(10000)
@@ -50,6 +54,8 @@ describe('suite 1 tests', function(){
 
     it('Cat Painting test',function() {
         return client
+
+            //Login
             .url('https://www.1stdibs.com/')
             .waitForVisible("span[data-action='login']", 10000)
             .click("span[data-action='login']")
@@ -61,6 +67,7 @@ describe('suite 1 tests', function(){
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(10000)
 
+            //Search
             .setValue("input[data-tn='global-header-search-input']","Cat Painting")
             .click("div[class='SearchBar-style__icon__umm_r']")
             .pause(7000)
@@ -68,6 +75,7 @@ describe('suite 1 tests', function(){
                 expect(text).to.equal('"Cat Painting"');
             })
 
+            //Logout
             .pause(10000)
             .url('https://www.1stdibs.com/')
             .pause(10000)
@@ -84,6 +92,8 @@ describe('suite 1 tests', function(){
 
     it('Gold Engagement Ring test',function() {
         return client
+
+            //Login
             .url('https://www.1stdibs.com/')
             .waitForVisible("span[data-action='login']", 10000)
             .click("span[data-action='login']")
@@ -95,6 +105,7 @@ describe('suite 1 tests', function(){
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(10000)
 
+            //Search
             .setValue("input[data-tn='global-header-search-input']","Gold Engagement Ring")
             .click("div[class='SearchBar-style__icon__umm_r']")
             .pause(7000)
@@ -102,6 +113,7 @@ describe('suite 1 tests', function(){
                 expect(text).to.equal('"Gold Engagement Ring"');
             })
 
+            //Logout
             .pause(10000)
             .url('https://www.1stdibs.com/')
             .pause(10000)
@@ -118,6 +130,8 @@ describe('suite 1 tests', function(){
 
     it('Chanel Handbag test',function() {
         return client
+
+            //Login
             .url('https://www.1stdibs.com/')
             .waitForVisible("span[data-action='login']", 10000)
             .click("span[data-action='login']")
@@ -129,6 +143,7 @@ describe('suite 1 tests', function(){
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(10000)
 
+            //Search
             .setValue("input[data-tn='global-header-search-input']","Chanel Handbag")
             .click("div[class='SearchBar-style__icon__umm_r']")
             .pause(7000)
@@ -136,6 +151,7 @@ describe('suite 1 tests', function(){
                 expect(text).to.equal('"Chanel Handbag"');
             })
 
+            //Logout
             .pause(10000)
             .url('https://www.1stdibs.com/')
             .pause(10000)
