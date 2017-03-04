@@ -34,7 +34,9 @@ describe('suite 1 tests', function(){
                 expect(text).to.equal('"Oak Wood Table"');
             })
 
-            .pause(5000)
+            .pause(10000)
+            .url('https://www.1stdibs.com/')
+            .pause(10000)
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
             .pause(10000)
@@ -43,6 +45,7 @@ describe('suite 1 tests', function(){
             .click("span[data-tn='sub-nav-list-item-link-logout']")
             .pause(10000)
             .url('https://www.1stdibs.com/')
+            .pause(5000)
     });
 
     it('Cat Painting test',function() {
@@ -65,7 +68,9 @@ describe('suite 1 tests', function(){
                 expect(text).to.equal('"Cat Painting"');
             })
 
-            .pause(5000)
+            .pause(10000)
+            .url('https://www.1stdibs.com/')
+            .pause(10000)
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
             .pause(10000)
@@ -97,7 +102,9 @@ describe('suite 1 tests', function(){
                 expect(text).to.equal('"Gold Engagement Ring"');
             })
 
-            .pause(5000)
+            .pause(10000)
+            .url('https://www.1stdibs.com/')
+            .pause(10000)
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
             .pause(10000)
@@ -129,7 +136,9 @@ describe('suite 1 tests', function(){
                 expect(text).to.equal('"Chanel Handbag"');
             })
 
-            .pause(5000)
+            .pause(10000)
+            .url('https://www.1stdibs.com/')
+            .pause(10000)
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
             .pause(10000)
