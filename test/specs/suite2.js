@@ -14,7 +14,7 @@ describe('suite 1 tests', function(){
             return client.init();
     });
 
-    it('Furniture test',function() {
+    it('Oak Wood Table test',function() {
         return client
             .url('https://www.1stdibs.com/')
             .waitForVisible("span[data-action='login']", 10000)
@@ -43,7 +43,7 @@ describe('suite 1 tests', function(){
             .url('https://www.1stdibs.com/')
     });
 
-    it('Fine Art test',function() {
+    it('Cat Painting test',function() {
         return client
             .url('https://www.1stdibs.com/')
             .waitForVisible("span[data-action='login']", 10000)
@@ -71,7 +71,7 @@ describe('suite 1 tests', function(){
             .pause(5000)
     });
 
-    it('Jewelry test',function() {
+    it('Gold Engagement Ring test',function() {
         return client
             .url('https://www.1stdibs.com/')
             .waitForVisible("span[data-action='login']", 10000)
@@ -99,7 +99,7 @@ describe('suite 1 tests', function(){
             .pause(5000)
     });
 
-    it('Fashion test',function() {
+    it('Chanel Handbag test',function() {
         return client
             .url('https://www.1stdibs.com/')
             .waitForVisible("span[data-action='login']", 10000)
