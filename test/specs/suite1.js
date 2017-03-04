@@ -1,11 +1,8 @@
 const dotenv      = require('dotenv').config();
 const webdriverio = require('webdriverio');
-const jquery      = require('jquery');
 const chai        = require('chai');
-const chaijquery  = require('chai-jquery');
 const should      = chai.should;
 const expect      = chai.expect;
-// const assert      = chai.assert;
 
 describe('suite 1 tests', function(){
 
