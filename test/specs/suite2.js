@@ -30,8 +30,11 @@ describe('suite 1 tests', function(){
             .setValue("input[data-tn='global-header-search-input']","Oak Wood Table")
             .click("div[class='SearchBar-style__icon__umm_r']")
             .pause(7000)
+            .getText('.results-header-search-term').then(function (text) {
+                expect(text).to.equal('"Oak Wood Table"');
+            })
 
-
+            .pause(5000)
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
             .pause(10000)
@@ -58,9 +61,14 @@ describe('suite 1 tests', function(){
             .setValue("input[data-tn='global-header-search-input']","Cat Painting")
             .click("div[class='SearchBar-style__icon__umm_r']")
             .pause(7000)
+            .getText('.results-header-search-term').then(function (text) {
+                expect(text).to.equal('"Cat Painting"');
+            })
 
+            .pause(5000)
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
+            .pause(10000)
             .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
             .pause(3000)
             .click("span[data-tn='sub-nav-list-item-link-logout']")
@@ -85,9 +93,14 @@ describe('suite 1 tests', function(){
             .setValue("input[data-tn='global-header-search-input']","Gold Engagement Ring")
             .click("div[class='SearchBar-style__icon__umm_r']")
             .pause(7000)
+            .getText('.results-header-search-term').then(function (text) {
+                expect(text).to.equal('"Gold Engagement Ring"');
+            })
 
+            .pause(5000)
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
+            .pause(10000)
             .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
             .pause(3000)
             .click("span[data-tn='sub-nav-list-item-link-logout']")
@@ -112,9 +125,14 @@ describe('suite 1 tests', function(){
             .setValue("input[data-tn='global-header-search-input']","Chanel Handbag")
             .click("div[class='SearchBar-style__icon__umm_r']")
             .pause(7000)
+            .getText('.results-header-search-term').then(function (text) {
+                expect(text).to.equal('"Chanel Handbag"');
+            })
 
+            .pause(5000)
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
+            .pause(10000)
             .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
             .pause(3000)
             .click("span[data-tn='sub-nav-list-item-link-logout']")
