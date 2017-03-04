@@ -150,6 +150,8 @@ describe('suite 1 tests', function(){
             .pause(10000)
 
             //Logout
+            .url('https://www.1stdibs.com/')
+            .pause(10000)
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
             .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
