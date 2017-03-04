@@ -27,6 +27,10 @@ describe('suite 1 tests', function(){
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(10000)
 
+            .setValue("input[data-tn='global-header-search-input']","Oak Wood Table")
+            .click("div[class='SearchBar-style__icon__umm_r']")
+            .pause(7000)
+
 
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
@@ -51,6 +55,9 @@ describe('suite 1 tests', function(){
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(10000)
 
+            .setValue("input[data-tn='global-header-search-input']","Cat Painting")
+            .click("div[class='SearchBar-style__icon__umm_r']")
+            .pause(7000)
 
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
@@ -75,6 +82,9 @@ describe('suite 1 tests', function(){
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(10000)
 
+            .setValue("input[data-tn='global-header-search-input']","Gold Engagement Ring")
+            .click("div[class='SearchBar-style__icon__umm_r']")
+            .pause(7000)
 
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
@@ -99,6 +109,9 @@ describe('suite 1 tests', function(){
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(10000)
 
+            .setValue("input[data-tn='global-header-search-input']","Chanel Handbag")
+            .click("div[class='SearchBar-style__icon__umm_r']")
+            .pause(7000)
 
             .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
