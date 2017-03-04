@@ -19,46 +19,56 @@ describe('suite 1 tests', function(){
     it('Furniture test',function() {
         return client
             .url('https://www.1stdibs.com/')
-            .pause(2000)
+            .waitForVisible("span[data-action='login']", 10000)
             .click("span[data-action='login']")
-            .pause(3000)
+            .waitForVisible('#login_email', 10000)
             .setValue('#login_email','1stdibstest@gmail.com')
-            .pause(2000)
             .setValue('#login_password','s!HNK6N776&9Rju')
-            .pause(2000)
+            .setValue('#login_password','s!HNK6N776&9Rju')
+            .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
             .click("button[data-tn='auth-modal-login-submit-button']")
             .pause(5000)
+            .waitForVisible("a[data-tn='global-nav-item-link-furniture']", 10000)
             .click("a[data-tn='global-nav-item-link-furniture']")
-            .pause(10000)
+            .waitForVisible('.browse-header-title', 10000)
             .getText('.browse-header-title').then(function (text) {
                 expect(text).to.include('Furniture');
             })
-            .pause(3000)
+            .pause(10000)
+            .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .click('.AccountNav-style__accountIcon__cVYjZ')
-            .pause(3000)
+            .pause(10000)
+            .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
             .click("span[data-tn='sub-nav-list-item-link-logout']")
-            .pause(5000)
+            .pause(10000)
             .url('https://www.1stdibs.com/')
-            .pause(5000)
     });
 
     it('Fine Art test',function() {
         return client
             .url('https://www.1stdibs.com/')
-            .pause(2000)
+            .waitForVisible("span[data-action='login']", 10000)
             .click("span[data-action='login']")
-            .pause(3000)
+            .waitForVisible('#login_email', 10000)
             .setValue('#login_email','1stdibstest@gmail.com')
-            .pause(2000)
+            .waitForVisible('#login_password', 10000)
             .setValue('#login_password','s!HNK6N776&9Rju')
-            .pause(2000)
+            .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
             .click("button[data-tn='auth-modal-login-submit-button']")
-            .pause(3000)
+            .pause(5000)
+            .waitForVisible("a[data-tn='global-nav-item-link-fine art']", 10000)
             .click("a[data-tn='global-nav-item-link-fine art']")
-            .pause(10000)
+            .waitForVisible('.browse-header-title', 10000)
             .getText('.browse-header-title').then(function (text) {
                 expect(text).to.include('Fine Art');
             })
+            .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
+            .click('.AccountNav-style__accountIcon__cVYjZ')
+            .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
+            .click("span[data-tn='sub-nav-list-item-link-logout']")
+            .pause(5000)
+            .url('https://www.1stdibs.com/')
+            .pause(5000)
     });
 
     // it('Jewelry test',function() {
@@ -77,7 +87,14 @@ describe('suite 1 tests', function(){
     //         .pause(10000)
     //         .getText('.browse-header-title').then(function (text) {
     //             expect(text).to.include('Jewelry & Watches');
-    //         });
+    //         })
+    //         .pause(10000)
+    //         .click('.AccountNav-style__accountIcon__cVYjZ')
+    //         .pause(10000)
+    //         .click("span[data-tn='sub-nav-list-item-link-logout']")
+    //         .pause(5000)
+    //         .url('https://www.1stdibs.com/')
+    //         .pause(5000)
     // });
 
     // it('Fashion test',function() {
@@ -96,7 +113,14 @@ describe('suite 1 tests', function(){
     //         .pause(10000)
     //         .getText('.browse-header-title').then(function (text) {
     //             expect(text).to.include('Fashion');
-    //         });
+    //         })
+    //         .pause(10000)
+    //         .click('.AccountNav-style__accountIcon__cVYjZ')
+    //         .pause(10000)
+    //         .click("span[data-tn='sub-nav-list-item-link-logout']")
+    //         .pause(5000)
+    //         .url('https://www.1stdibs.com/')
+    //         .pause(5000)
     // });
 
     after(function() {
