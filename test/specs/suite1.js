@@ -1,40 +1,43 @@
 const dotenv      = require('dotenv').config();
-const webdriverio = require('webdriverio');
-const chai        = require('chai');
-const should      = chai.should;
-const expect      = chai.expect;
-let HomePage      = require('../pageobjects/home.page');
+const webdriverio     = require('webdriverio');
+const chai            = require('chai');
+const should          = chai.should;
+const expect          = chai.expect;
+const PageObject      = require('../pageobjects/home.page');
+const HomePageObject  = require('../pageobjects/home.page');
 
 describe('suite 1 tests', function(){
 
     this.timeout(99999999);
-    // let client;
+    let client;
+    let Page;
+    let HomePage;
 
-    // before(function(){
-    //         client = webdriverio.remote({ desiredCapabilities: {browserName: 'firefox'} });
-    //         return client.init();
-    // });
+    before(function(){
+            Page = new PageObject();
+            HomePage = new HomePageObject();
+            client = webdriverio.remote({ desiredCapabilities: {browserName: 'firefox'} });
+            return client.init();
+    });
 
     it('Furniture test',function() {
 
-        return HomePage
-        .open()
-        // return client
+        return client
 
-        //     //Login
-        //     .url('https://www.1stdibs.com/')
-        //     // HomePage.open()
-        //     .waitForVisible("span[data-action='login']", 10000)
-        //     .click("span[data-action='login']")
-        //     .waitForVisible('#login_email', 10000)
-        //     .setValue('#login_email',process.env.test_email)
-        //     .waitForVisible('#login_password', 10000)
-        //     .setValue('#login_password',process.env.test_password)
-        //     .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
-        //     .click("button[data-tn='auth-modal-login-submit-button']")
-        //     .pause(5000)
+            //Login
+            // .url('https://www.1stdibs.com/')
+            .url(Page.url)
+            .waitForVisible("span[data-action='login']", 10000)
+            .click("span[data-action='login']")
+            .waitForVisible('#login_email', 10000)
+            .setValue('#login_email',process.env.test_email)
+            .waitForVisible('#login_password', 10000)
+            .setValue('#login_password',process.env.test_password)
+            .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
+            .click("button[data-tn='auth-modal-login-submit-button']")
+            .pause(5000)
 
-        //     //Navigate to Furniture
+            // // Navigate to Furniture
         //     .waitForVisible("a[data-tn='global-nav-item-link-furniture']", 10000)
         //     .click("a[data-tn='global-nav-item-link-furniture']")
         //     .waitForVisible('.browse-header-title', 10000)
