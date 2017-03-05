@@ -3,21 +3,22 @@ const webdriverio = require('webdriverio');
 const chai        = require('chai');
 const should      = chai.should;
 const expect      = chai.expect;
-const HomePage    = require('../pageobjects/home.page');
+let HomePage      = require('../pageobjects/home.page');
 
 describe('suite 1 tests', function(){
 
     this.timeout(99999999);
-    let client;
+    // let client;
 
-    before(function(){
-            client = webdriverio.remote({ desiredCapabilities: {browserName: 'firefox'} });
-            return client.init();
-    });
+    // before(function(){
+    //         client = webdriverio.remote({ desiredCapabilities: {browserName: 'firefox'} });
+    //         return client.init();
+    // });
 
     it('Furniture test',function() {
 
-        HomePage.open()
+        return HomePage
+        .open()
         // return client
 
         //     //Login
