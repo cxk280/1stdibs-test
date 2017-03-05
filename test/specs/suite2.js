@@ -1,16 +1,21 @@
 const dotenv      = require('dotenv').config();
-const webdriverio = require('webdriverio');
-const chai        = require('chai');
-const should      = chai.should;
-const expect      = chai.expect;
-const homePage    = require('../pageobjects/home.page');
+const webdriverio     = require('webdriverio');
+const chai            = require('chai');
+const should          = chai.should;
+const expect          = chai.expect;
+const PageObject      = require('../pageobjects/page');
+const HomePageObject  = require('../pageobjects/home.page');
 
 describe('suite 2 tests', function(){
 
     this.timeout(99999999);
     let client;
+    let Page;
+    let HomePage;
 
     before(function(){
+            Page = new PageObject();
+            HomePage = new HomePageObject();
             client = webdriverio.remote({ desiredCapabilities: {browserName: 'firefox'} });
             return client.init();
     });

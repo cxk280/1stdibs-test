@@ -15,7 +15,7 @@ exports.config = {
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
-        './test/specs/suite2.js'
+        './test/specs/suite1.js'
     ],
     //
     // ============
