@@ -10,5 +10,11 @@ class HomePage extends Page {
     //     this.form.submitForm();
     // }
 
+    // get loginButton()  { return browser.element("span[data-action='login']"); }
+    constructor() {
+        super();
+        this.loginButton = "span[data-action='login']";
+    }
+
 }
 module.exports = HomePage;

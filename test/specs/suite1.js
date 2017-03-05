@@ -27,7 +27,8 @@ describe('suite 1 tests', function(){
             //Login
             // .url('https://www.1stdibs.com/')
             .url(Page.url)
-            .waitForVisible("span[data-action='login']", 10000)
+            // .waitForVisible("span[data-action='login']", 10000)
+            .waitForVisible(HomePage.loginButton, 10000)
             .click("span[data-action='login']")
             .waitForVisible('#login_email', 10000)
             .setValue('#login_email',process.env.test_email)
