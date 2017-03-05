@@ -3,8 +3,9 @@ const webdriverio = require('webdriverio');
 const chai        = require('chai');
 const should      = chai.should;
 const expect      = chai.expect;
+const homePage    = require('../pageobjects/home.page');
 
-describe('suite 1 tests', function(){
+describe('suite 2 tests', function(){
 
     this.timeout(99999999);
     let client;

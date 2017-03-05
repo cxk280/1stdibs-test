@@ -1,10 +1,10 @@
 "use strict";
 class Page {
   constructor() {
-    this.title = 'My Page';
+    this.title = '1stDibs';
   }
-  open(path) {
-    browser.url('/' + path);
+  open() {
+    browser.url('https://www.1stdibs.com/');
   }
 }
 module.exports = Page;
