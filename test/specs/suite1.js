@@ -28,76 +28,55 @@ describe('suite 1 tests', function(){
         return client
 
             //Login
-            // .url('https://www.1stdibs.com/')
             .url(Page.url)
-            // .waitForVisible("span[data-action='login']", 10000)
             .waitForVisible(HomePage.loginButton, 10000)
-            // .click("span[data-action='login']")
             .click(HomePage.loginButton)
-            // .waitForVisible('#login_email', 10000)
             .waitForVisible(Page.loginEmail, 10000)
-            // .setValue('#login_email',process.env.test_email)
             .setValue(Page.loginEmail,process.env.test_email)
-            // .waitForVisible('#login_password', 10000)
             .waitForVisible(Page.loginPassword, 10000)
-            // .setValue('#login_password',process.env.test_password)
             .setValue(Page.loginPassword,process.env.test_password)
-            // .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
             .waitForVisible(Page.submitButton, 10000)
-            // .click("button[data-tn='auth-modal-login-submit-button']")
             .click(Page.submitButton)
             .pause(5000)
 
             // Navigate to Furniture
-        //     .waitForVisible("a[data-tn='global-nav-item-link-furniture']", 10000)
             .waitForVisible(HomePage.furnitureLink, 10000)
-        //     .click("a[data-tn='global-nav-item-link-furniture']")
             .click(HomePage.furnitureLink)
-        //     .waitForVisible('.browse-header-title', 10000)
             .waitForVisible(MainHeadingPage.headerTitle, 10000)
-        //     .getText('.browse-header-title').then(function (text) {
-        //         expect(text).to.include('Furniture');
-        //     })
             .getText(MainHeadingPage.headerTitle).then(function (text) {
                 expect(text).to.include('Furniture');
             })
             .pause(10000)
 
             //Logout
-        //     .url('https://www.1stdibs.com/')
             .url(Page.url)
             .pause(10000)
-        //     .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
             .waitForVisible(HomePage.accountDropdown, 10000)
-        //     .click('.AccountNav-style__accountIcon__cVYjZ')
             .click(HomePage.accountDropdown)
             .pause(10000)
-        //     .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
             .waitForVisible(HomePage.logoutButton, 10000)
             .pause(3000)
-            // .click("span[data-tn='sub-nav-list-item-link-logout']")
             .click(HomePage.logoutButton)
             .pause(10000)
-        //     .url('https://www.1stdibs.com/')
             .url(Page.url)
     });
 
-    // it('Fine Art test',function() {
-    //     return client
+    it('Fine Art test',function() {
+        return client
 
-    //         //Login
-    //         .url('https://www.1stdibs.com/')
-    //         .waitForVisible("span[data-action='login']", 10000)
-    //         .click("span[data-action='login']")
-    //         .waitForVisible('#login_email', 10000)
-    //         .setValue('#login_email',process.env.test_email)
-    //         .waitForVisible('#login_password', 10000)
-    //         .setValue('#login_password',process.env.test_password)
-    //         .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
-    //         .click("button[data-tn='auth-modal-login-submit-button']")
-    //         .pause(5000)
+            //Login
+            .url(Page.url)
+            .waitForVisible(HomePage.loginButton, 10000)
+            .click(HomePage.loginButton)
+            .waitForVisible(Page.loginEmail, 10000)
+            .setValue(Page.loginEmail,process.env.test_email)
+            .waitForVisible(Page.loginPassword, 10000)
+            .setValue(Page.loginPassword,process.env.test_password)
+            .waitForVisible(Page.submitButton, 10000)
+            .click(Page.submitButton)
+            .pause(5000)
 
-    //         //Navigate to Fine Art
+            //Navigate to Fine Art
     //         .waitForVisible("a[data-tn='global-nav-item-link-fine art']", 10000)
     //         .click("a[data-tn='global-nav-item-link-fine art']")
     //         .waitForVisible('.browse-header-title', 10000)
@@ -105,36 +84,43 @@ describe('suite 1 tests', function(){
     //             expect(text).to.include('Fine Art');
     //         })
     //         .pause(10000)
+            .waitForVisible(HomePage.fineArtLink, 10000)
+            .click(HomePage.fineArtLink)
+            .waitForVisible(MainHeadingPage.headerTitle, 10000)
+            .getText(MainHeadingPage.headerTitle).then(function (text) {
+                expect(text).to.include('Fine Art');
+            })
+            .pause(10000)
 
-    //         //Logout
-    //         .url('https://www.1stdibs.com/')
-    //         .pause(10000)
-    //         .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
-    //         .click('.AccountNav-style__accountIcon__cVYjZ')
-    //         .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
-    //         .pause(3000)
-    //         .click("span[data-tn='sub-nav-list-item-link-logout']")
-    //         .pause(5000)
-    //         .url('https://www.1stdibs.com/')
-    //         .pause(5000)
-    // });
+            //Logout
+            .url('https://www.1stdibs.com/')
+            .pause(10000)
+            .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
+            .click('.AccountNav-style__accountIcon__cVYjZ')
+            .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
+            .pause(3000)
+            .click("span[data-tn='sub-nav-list-item-link-logout']")
+            .pause(5000)
+            .url('https://www.1stdibs.com/')
+            .pause(5000)
+    });
 
-    // it('Jewelry test',function() {
-    //     return client
+    it('Jewelry test',function() {
+        return client
 
-    //         //Login
-    //         .url('https://www.1stdibs.com/')
-    //         .waitForVisible("span[data-action='login']", 10000)
-    //         .click("span[data-action='login']")
-    //         .waitForVisible('#login_email', 10000)
-    //         .setValue('#login_email',process.env.test_email)
-    //         .waitForVisible('#login_password', 10000)
-    //         .setValue('#login_password',process.env.test_password)
-    //         .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
-    //         .click("button[data-tn='auth-modal-login-submit-button']")
-    //         .pause(5000)
+            //Login
+            .url(Page.url)
+            .waitForVisible(HomePage.loginButton, 10000)
+            .click(HomePage.loginButton)
+            .waitForVisible(Page.loginEmail, 10000)
+            .setValue(Page.loginEmail,process.env.test_email)
+            .waitForVisible(Page.loginPassword, 10000)
+            .setValue(Page.loginPassword,process.env.test_password)
+            .waitForVisible(Page.submitButton, 10000)
+            .click(Page.submitButton)
+            .pause(5000)
 
-    //         //Navigate to Jewelry & Watches
+            //Navigate to Jewelry & Watches
     //         .waitForVisible("a[data-tn='global-nav-item-link-jewelry & watches']", 10000)
     //         .click("a[data-tn='global-nav-item-link-jewelry & watches']")
     //         .waitForVisible('.browse-header-title', 10000)
@@ -142,36 +128,43 @@ describe('suite 1 tests', function(){
     //             expect(text).to.include('Jewelry & Watches');
     //         })
     //         .pause(10000)
+            .waitForVisible(HomePage.jewelryLink, 10000)
+            .click(HomePage.jewelryLink)
+            .waitForVisible(MainHeadingPage.headerTitle, 10000)
+            .getText(MainHeadingPage.headerTitle).then(function (text) {
+                expect(text).to.include('Jewelry & Watches');
+            })
+            .pause(10000)
 
-    //         //Logout
-    //         .url('https://www.1stdibs.com/')
-    //         .pause(10000)
-    //         .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
-    //         .click('.AccountNav-style__accountIcon__cVYjZ')
-    //         .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
-    //         .pause(3000)
-    //         .click("span[data-tn='sub-nav-list-item-link-logout']")
-    //         .pause(5000)
-    //         .url('https://www.1stdibs.com/')
-    //         .pause(5000)
-    // });
+            //Logout
+            .url('https://www.1stdibs.com/')
+            .pause(10000)
+            .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
+            .click('.AccountNav-style__accountIcon__cVYjZ')
+            .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
+            .pause(3000)
+            .click("span[data-tn='sub-nav-list-item-link-logout']")
+            .pause(5000)
+            .url('https://www.1stdibs.com/')
+            .pause(5000)
+    });
 
-    // it('Fashion test',function() {
-    //     return client
+    it('Fashion test',function() {
+        return client
 
-    //         //Login
-    //         .url('https://www.1stdibs.com/')
-    //         .waitForVisible("span[data-action='login']", 10000)
-    //         .click("span[data-action='login']")
-    //         .waitForVisible('#login_email', 10000)
-    //         .setValue('#login_email',process.env.test_email)
-    //         .waitForVisible('#login_password', 10000)
-    //         .setValue('#login_password',process.env.test_password)
-    //         .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
-    //         .click("button[data-tn='auth-modal-login-submit-button']")
-    //         .pause(5000)
+            //Login
+            .url(Page.url)
+            .waitForVisible(HomePage.loginButton, 10000)
+            .click(HomePage.loginButton)
+            .waitForVisible(Page.loginEmail, 10000)
+            .setValue(Page.loginEmail,process.env.test_email)
+            .waitForVisible(Page.loginPassword, 10000)
+            .setValue(Page.loginPassword,process.env.test_password)
+            .waitForVisible(Page.submitButton, 10000)
+            .click(Page.submitButton)
+            .pause(5000)
 
-    //         //Navigate to Fashion
+            //Navigate to Fashion
     //         .waitForVisible("a[data-tn='global-nav-item-link-fashion']", 10000)
     //         .click("a[data-tn='global-nav-item-link-fashion']")
     //         .waitForVisible('.browse-header-title', 10000)
@@ -179,21 +172,28 @@ describe('suite 1 tests', function(){
     //             expect(text).to.include('Fashion');
     //         })
     //         .pause(10000)
+            .waitForVisible(HomePage.fashionLink, 10000)
+            .click(HomePage.fashionLink)
+            .waitForVisible(MainHeadingPage.headerTitle, 10000)
+            .getText(MainHeadingPage.headerTitle).then(function (text) {
+                expect(text).to.include('Fashion');
+            })
+            .pause(10000)
 
-    //         //Logout
-    //         .url('https://www.1stdibs.com/')
-    //         .pause(10000)
-    //         .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
-    //         .click('.AccountNav-style__accountIcon__cVYjZ')
-    //         .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
-    //         .pause(3000)
-    //         .click("span[data-tn='sub-nav-list-item-link-logout']")
-    //         .pause(5000)
-    //         .url('https://www.1stdibs.com/')
-    //         .pause(5000)
-    // });
+            //Logout
+            .url('https://www.1stdibs.com/')
+            .pause(10000)
+            .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
+            .click('.AccountNav-style__accountIcon__cVYjZ')
+            .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
+            .pause(3000)
+            .click("span[data-tn='sub-nav-list-item-link-logout']")
+            .pause(5000)
+            .url('https://www.1stdibs.com/')
+            .pause(5000)
+    });
 
-    // after(function() {
-    //     return client.end();
-    // });
+    after(function() {
+        return client.end();
+    });
 });
