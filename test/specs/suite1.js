@@ -5,6 +5,7 @@ const should          = chai.should;
 const expect          = chai.expect;
 const PageObject      = require('../pageobjects/page');
 const HomePageObject  = require('../pageobjects/home.page');
+const MainHeadingPageObject  = require('../pageobjects/main.heading.page');
 
 describe('suite 1 tests', function(){
 
@@ -12,10 +13,12 @@ describe('suite 1 tests', function(){
     let client;
     let Page;
     let HomePage;
+    let MainHeadingPage;
 
     before(function(){
             Page = new PageObject();
             HomePage = new HomePageObject();
+            MainHeadingPage = new MainHeadingPageObject();
             client = webdriverio.remote({ desiredCapabilities: {browserName: 'firefox'} });
             return client.init();
     });
@@ -45,14 +48,20 @@ describe('suite 1 tests', function(){
             .click(Page.submitButton)
             .pause(5000)
 
-            // // Navigate to Furniture
+            // Navigate to Furniture
         //     .waitForVisible("a[data-tn='global-nav-item-link-furniture']", 10000)
+            .waitForVisible(HomePage.furnitureLink, 10000)
         //     .click("a[data-tn='global-nav-item-link-furniture']")
+            .click(HomePage.furnitureLink)
         //     .waitForVisible('.browse-header-title', 10000)
+            .waitForVisible(MainHeadingPage.headerTitle, 10000)
         //     .getText('.browse-header-title').then(function (text) {
         //         expect(text).to.include('Furniture');
         //     })
-        //     .pause(10000)
+            .getText(MainHeadingPage.headerTitle).then(function (text) {
+                expect(text).to.include('Furniture');
+            })
+            .pause(10000)
 
         //     //Logout
         //     .url('https://www.1stdibs.com/')
