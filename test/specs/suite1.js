@@ -59,6 +59,7 @@ describe('suite 1 tests', function(){
             .click(HomePage.logoutButton)
             .pause(10000)
             .url(Page.url)
+            .pause(5000)
     });
 
     it('Fine Art test',function() {

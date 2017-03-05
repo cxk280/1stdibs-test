@@ -13,6 +13,8 @@ class HomePage extends Page {
         this.fashionLink = "a[data-tn='global-nav-item-link-fashion']";
         this.accountDropdown = '.AccountNav-style__accountIcon__cVYjZ';
         this.logoutButton = "span[data-tn='sub-nav-list-item-link-logout']";
+        this.searchInput = "input[data-tn='global-header-search-input']";
+        this.searchButton = "div[class='SearchBar-style__icon__umm_r']";
     }
 
 }

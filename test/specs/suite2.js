@@ -5,6 +5,7 @@ const should          = chai.should;
 const expect          = chai.expect;
 const PageObject      = require('../pageobjects/page');
 const HomePageObject  = require('../pageobjects/home.page');
+const SearchResultsPageObject  = require('../pageobjects/search.results.page');
 
 describe('suite 2 tests', function(){
 
@@ -12,10 +13,12 @@ describe('suite 2 tests', function(){
     let client;
     let Page;
     let HomePage;
+    let SearchResultsPage;
 
     before(function(){
             Page = new PageObject();
             HomePage = new HomePageObject();
+            SearchResultsPage = new SearchResultsPageObject();
             client = webdriverio.remote({ desiredCapabilities: {browserName: 'firefox'} });
             return client.init();
     });
@@ -24,37 +27,36 @@ describe('suite 2 tests', function(){
         return client
 
             //Login
-            .url('https://www.1stdibs.com/')
-            .waitForVisible("span[data-action='login']", 10000)
-            .click("span[data-action='login']")
-            .waitForVisible('#login_email', 10000)
-            .setValue('#login_email',process.env.test_email)
-            .waitForVisible('#login_password', 10000)
-            .setValue('#login_password',process.env.test_password)
-            .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
-            .click("button[data-tn='auth-modal-login-submit-button']")
-            .pause(10000)
+            .url(Page.url)
+            .waitForVisible(HomePage.loginButton, 10000)
+            .click(HomePage.loginButton)
+            .waitForVisible(Page.loginEmail, 10000)
+            .setValue(Page.loginEmail,process.env.test_email)
+            .waitForVisible(Page.loginPassword, 10000)
+            .setValue(Page.loginPassword,process.env.test_password)
+            .waitForVisible(Page.submitButton, 10000)
+            .click(Page.submitButton)
+            .pause(5000)
 
             //Search
-            .setValue("input[data-tn='global-header-search-input']","Oak Wood Table")
-            .click("div[class='SearchBar-style__icon__umm_r']")
+            .setValue(HomePage.searchInput,"Oak Wood Table")
+            .click(HomePage.searchButton)
             .pause(7000)
-            .getText('.results-header-search-term').then(function (text) {
+            .getText(SearchResultsPage.resultsHeader).then(function (text) {
                 expect(text).to.equal('"Oak Wood Table"');
             })
 
             //Logout
+            .url(Page.url)
             .pause(10000)
-            .url('https://www.1stdibs.com/')
+            .waitForVisible(HomePage.accountDropdown, 10000)
+            .click(HomePage.accountDropdown)
             .pause(10000)
-            .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
-            .click('.AccountNav-style__accountIcon__cVYjZ')
-            .pause(10000)
-            .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
+            .waitForVisible(HomePage.logoutButton, 10000)
             .pause(3000)
-            .click("span[data-tn='sub-nav-list-item-link-logout']")
+            .click(HomePage.logoutButton)
             .pause(10000)
-            .url('https://www.1stdibs.com/')
+            .url(Page.url)
             .pause(5000)
     });
 
@@ -62,37 +64,36 @@ describe('suite 2 tests', function(){
         return client
 
             //Login
-            .url('https://www.1stdibs.com/')
-            .waitForVisible("span[data-action='login']", 10000)
-            .click("span[data-action='login']")
-            .waitForVisible('#login_email', 10000)
-            .setValue('#login_email',process.env.test_email)
-            .waitForVisible('#login_password', 10000)
-            .setValue('#login_password',process.env.test_password)
-            .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
-            .click("button[data-tn='auth-modal-login-submit-button']")
-            .pause(10000)
+            .url(Page.url)
+            .waitForVisible(HomePage.loginButton, 10000)
+            .click(HomePage.loginButton)
+            .waitForVisible(Page.loginEmail, 10000)
+            .setValue(Page.loginEmail,process.env.test_email)
+            .waitForVisible(Page.loginPassword, 10000)
+            .setValue(Page.loginPassword,process.env.test_password)
+            .waitForVisible(Page.submitButton, 10000)
+            .click(Page.submitButton)
+            .pause(5000)
 
             //Search
-            .setValue("input[data-tn='global-header-search-input']","Cat Painting")
-            .click("div[class='SearchBar-style__icon__umm_r']")
+            .setValue(HomePage.searchInput,"Cat Painting")
+            .click(HomePage.searchButton)
             .pause(7000)
-            .getText('.results-header-search-term').then(function (text) {
+            .getText(SearchResultsPage.resultsHeader).then(function (text) {
                 expect(text).to.equal('"Cat Painting"');
             })
 
             //Logout
+            .url(Page.url)
             .pause(10000)
-            .url('https://www.1stdibs.com/')
+            .waitForVisible(HomePage.accountDropdown, 10000)
+            .click(HomePage.accountDropdown)
             .pause(10000)
-            .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
-            .click('.AccountNav-style__accountIcon__cVYjZ')
-            .pause(10000)
-            .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
+            .waitForVisible(HomePage.logoutButton, 10000)
             .pause(3000)
-            .click("span[data-tn='sub-nav-list-item-link-logout']")
-            .pause(5000)
-            .url('https://www.1stdibs.com/')
+            .click(HomePage.logoutButton)
+            .pause(10000)
+            .url(Page.url)
             .pause(5000)
     });
 
@@ -100,37 +101,36 @@ describe('suite 2 tests', function(){
         return client
 
             //Login
-            .url('https://www.1stdibs.com/')
-            .waitForVisible("span[data-action='login']", 10000)
-            .click("span[data-action='login']")
-            .waitForVisible('#login_email', 10000)
-            .setValue('#login_email',process.env.test_email)
-            .waitForVisible('#login_password', 10000)
-            .setValue('#login_password',process.env.test_password)
-            .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
-            .click("button[data-tn='auth-modal-login-submit-button']")
-            .pause(10000)
+            .url(Page.url)
+            .waitForVisible(HomePage.loginButton, 10000)
+            .click(HomePage.loginButton)
+            .waitForVisible(Page.loginEmail, 10000)
+            .setValue(Page.loginEmail,process.env.test_email)
+            .waitForVisible(Page.loginPassword, 10000)
+            .setValue(Page.loginPassword,process.env.test_password)
+            .waitForVisible(Page.submitButton, 10000)
+            .click(Page.submitButton)
+            .pause(5000)
 
             //Search
-            .setValue("input[data-tn='global-header-search-input']","Gold Engagement Ring")
-            .click("div[class='SearchBar-style__icon__umm_r']")
+            .setValue(HomePage.searchInput,"Gold Engagement Ring")
+            .click(HomePage.searchButton)
             .pause(7000)
-            .getText('.results-header-search-term').then(function (text) {
+            .getText(SearchResultsPage.resultsHeader).then(function (text) {
                 expect(text).to.equal('"Gold Engagement Ring"');
             })
 
             //Logout
+            .url(Page.url)
             .pause(10000)
-            .url('https://www.1stdibs.com/')
+            .waitForVisible(HomePage.accountDropdown, 10000)
+            .click(HomePage.accountDropdown)
             .pause(10000)
-            .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
-            .click('.AccountNav-style__accountIcon__cVYjZ')
-            .pause(10000)
-            .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
+            .waitForVisible(HomePage.logoutButton, 10000)
             .pause(3000)
-            .click("span[data-tn='sub-nav-list-item-link-logout']")
-            .pause(5000)
-            .url('https://www.1stdibs.com/')
+            .click(HomePage.logoutButton)
+            .pause(10000)
+            .url(Page.url)
             .pause(5000)
     });
 
@@ -138,37 +138,36 @@ describe('suite 2 tests', function(){
         return client
 
             //Login
-            .url('https://www.1stdibs.com/')
-            .waitForVisible("span[data-action='login']", 10000)
-            .click("span[data-action='login']")
-            .waitForVisible('#login_email', 10000)
-            .setValue('#login_email',process.env.test_email)
-            .waitForVisible('#login_password', 10000)
-            .setValue('#login_password',process.env.test_password)
-            .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
-            .click("button[data-tn='auth-modal-login-submit-button']")
-            .pause(10000)
+            .url(Page.url)
+            .waitForVisible(HomePage.loginButton, 10000)
+            .click(HomePage.loginButton)
+            .waitForVisible(Page.loginEmail, 10000)
+            .setValue(Page.loginEmail,process.env.test_email)
+            .waitForVisible(Page.loginPassword, 10000)
+            .setValue(Page.loginPassword,process.env.test_password)
+            .waitForVisible(Page.submitButton, 10000)
+            .click(Page.submitButton)
+            .pause(5000)
 
             //Search
-            .setValue("input[data-tn='global-header-search-input']","Chanel Handbag")
-            .click("div[class='SearchBar-style__icon__umm_r']")
+            .setValue(HomePage.searchInput,"Chanel Handbag")
+            .click(HomePage.searchButton)
             .pause(7000)
-            .getText('.results-header-search-term').then(function (text) {
+            .getText(SearchResultsPage.resultsHeader).then(function (text) {
                 expect(text).to.equal('"Chanel Handbag"');
             })
 
             //Logout
+            .url(Page.url)
             .pause(10000)
-            .url('https://www.1stdibs.com/')
+            .waitForVisible(HomePage.accountDropdown, 10000)
+            .click(HomePage.accountDropdown)
             .pause(10000)
-            .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
-            .click('.AccountNav-style__accountIcon__cVYjZ')
-            .pause(10000)
-            .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
+            .waitForVisible(HomePage.logoutButton, 10000)
             .pause(3000)
-            .click("span[data-tn='sub-nav-list-item-link-logout']")
-            .pause(5000)
-            .url('https://www.1stdibs.com/')
+            .click(HomePage.logoutButton)
+            .pause(10000)
+            .url(Page.url)
             .pause(5000)
     });
 
