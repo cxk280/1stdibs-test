@@ -3,7 +3,7 @@ const webdriverio     = require('webdriverio');
 const chai            = require('chai');
 const should          = chai.should;
 const expect          = chai.expect;
-const PageObject      = require('../pageobjects/home.page');
+const PageObject      = require('../pageobjects/page');
 const HomePageObject  = require('../pageobjects/home.page');
 
 describe('suite 1 tests', function(){
@@ -29,13 +29,20 @@ describe('suite 1 tests', function(){
             .url(Page.url)
             // .waitForVisible("span[data-action='login']", 10000)
             .waitForVisible(HomePage.loginButton, 10000)
-            .click("span[data-action='login']")
-            .waitForVisible('#login_email', 10000)
-            .setValue('#login_email',process.env.test_email)
-            .waitForVisible('#login_password', 10000)
-            .setValue('#login_password',process.env.test_password)
-            .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
-            .click("button[data-tn='auth-modal-login-submit-button']")
+            // .click("span[data-action='login']")
+            .click(HomePage.loginButton)
+            // .waitForVisible('#login_email', 10000)
+            .waitForVisible(Page.loginEmail, 10000)
+            // .setValue('#login_email',process.env.test_email)
+            .setValue(Page.loginEmail,process.env.test_email)
+            // .waitForVisible('#login_password', 10000)
+            .waitForVisible(Page.loginPassword, 10000)
+            // .setValue('#login_password',process.env.test_password)
+            .setValue(Page.loginPassword,process.env.test_password)
+            // .waitForVisible("button[data-tn='auth-modal-login-submit-button']", 10000)
+            .waitForVisible(Page.submitButton, 10000)
+            // .click("button[data-tn='auth-modal-login-submit-button']")
+            .click(Page.submitButton)
             .pause(5000)
 
             // // Navigate to Furniture
