@@ -77,13 +77,6 @@ describe('suite 1 tests', function(){
             .pause(5000)
 
             //Navigate to Fine Art
-    //         .waitForVisible("a[data-tn='global-nav-item-link-fine art']", 10000)
-    //         .click("a[data-tn='global-nav-item-link-fine art']")
-    //         .waitForVisible('.browse-header-title', 10000)
-    //         .getText('.browse-header-title').then(function (text) {
-    //             expect(text).to.include('Fine Art');
-    //         })
-    //         .pause(10000)
             .waitForVisible(HomePage.fineArtLink, 10000)
             .click(HomePage.fineArtLink)
             .waitForVisible(MainHeadingPage.headerTitle, 10000)
@@ -121,13 +114,6 @@ describe('suite 1 tests', function(){
             .pause(5000)
 
             //Navigate to Jewelry & Watches
-    //         .waitForVisible("a[data-tn='global-nav-item-link-jewelry & watches']", 10000)
-    //         .click("a[data-tn='global-nav-item-link-jewelry & watches']")
-    //         .waitForVisible('.browse-header-title', 10000)
-    //         .getText('.browse-header-title').then(function (text) {
-    //             expect(text).to.include('Jewelry & Watches');
-    //         })
-    //         .pause(10000)
             .waitForVisible(HomePage.jewelryLink, 10000)
             .click(HomePage.jewelryLink)
             .waitForVisible(MainHeadingPage.headerTitle, 10000)
@@ -165,13 +151,6 @@ describe('suite 1 tests', function(){
             .pause(5000)
 
             //Navigate to Fashion
-    //         .waitForVisible("a[data-tn='global-nav-item-link-fashion']", 10000)
-    //         .click("a[data-tn='global-nav-item-link-fashion']")
-    //         .waitForVisible('.browse-header-title', 10000)
-    //         .getText('.browse-header-title').then(function (text) {
-    //             expect(text).to.include('Fashion');
-    //         })
-    //         .pause(10000)
             .waitForVisible(HomePage.fashionLink, 10000)
             .click(HomePage.fashionLink)
             .waitForVisible(MainHeadingPage.headerTitle, 10000)
