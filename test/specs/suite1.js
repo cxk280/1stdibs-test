@@ -63,17 +63,23 @@ describe('suite 1 tests', function(){
             })
             .pause(10000)
 
-        //     //Logout
+            //Logout
         //     .url('https://www.1stdibs.com/')
-        //     .pause(10000)
+            .url(Page.url)
+            .pause(10000)
         //     .waitForVisible('.AccountNav-style__accountIcon__cVYjZ', 10000)
+            .waitForVisible(HomePage.accountDropdown, 10000)
         //     .click('.AccountNav-style__accountIcon__cVYjZ')
-        //     .pause(10000)
+            .click(HomePage.accountDropdown)
+            .pause(10000)
         //     .waitForVisible("span[data-tn='sub-nav-list-item-link-logout']", 10000)
-        //     .pause(3000)
-        //     .click("span[data-tn='sub-nav-list-item-link-logout']")
-        //     .pause(10000)
+            .waitForVisible(HomePage.logoutButton, 10000)
+            .pause(3000)
+            // .click("span[data-tn='sub-nav-list-item-link-logout']")
+            .click(HomePage.logoutButton)
+            .pause(10000)
         //     .url('https://www.1stdibs.com/')
+            .url(Page.url)
     });
 
     // it('Fine Art test',function() {
