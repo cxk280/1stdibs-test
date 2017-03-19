@@ -37,6 +37,8 @@ describe('suite 2 tests', function(){
             .waitForVisible(Page.submitButton, 10000)
             .click(Page.submitButton)
             .pause(5000)
+            .url(Page.url)
+            .pause(5000)
 
             //Search
             .setValue(HomePage.searchInput,"Oak Wood Table")
@@ -73,6 +75,8 @@ describe('suite 2 tests', function(){
             .setValue(Page.loginPassword,process.env.test_password)
             .waitForVisible(Page.submitButton, 10000)
             .click(Page.submitButton)
+            .pause(5000)
+            .url(Page.url)
             .pause(5000)
 
             //Search
@@ -111,6 +115,8 @@ describe('suite 2 tests', function(){
             .waitForVisible(Page.submitButton, 10000)
             .click(Page.submitButton)
             .pause(5000)
+            .url(Page.url)
+            .pause(5000)
 
             //Search
             .setValue(HomePage.searchInput,"Gold Engagement Ring")
@@ -147,6 +153,8 @@ describe('suite 2 tests', function(){
             .setValue(Page.loginPassword,process.env.test_password)
             .waitForVisible(Page.submitButton, 10000)
             .click(Page.submitButton)
+            .pause(5000)
+            .url(Page.url)
             .pause(5000)
 
             //Search

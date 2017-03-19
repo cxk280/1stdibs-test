@@ -38,6 +38,8 @@ describe('suite 1 tests', function(){
             .waitForVisible(Page.submitButton, 10000)
             .click(Page.submitButton)
             .pause(5000)
+            .url(Page.url)
+            .pause(5000)
 
             // Navigate to Furniture
             .waitForVisible(HomePage.furnitureLink, 10000)
@@ -76,6 +78,8 @@ describe('suite 1 tests', function(){
             .waitForVisible(Page.submitButton, 10000)
             .click(Page.submitButton)
             .pause(5000)
+            .url(Page.url)
+            .pause(5000)
 
             //Navigate to Fine Art
             .waitForVisible(HomePage.fineArtLink, 10000)
@@ -113,6 +117,8 @@ describe('suite 1 tests', function(){
             .waitForVisible(Page.submitButton, 10000)
             .click(Page.submitButton)
             .pause(5000)
+            .url(Page.url)
+            .pause(5000)
 
             //Navigate to Jewelry & Watches
             .waitForVisible(HomePage.jewelryLink, 10000)
@@ -149,6 +155,8 @@ describe('suite 1 tests', function(){
             .setValue(Page.loginPassword,process.env.test_password)
             .waitForVisible(Page.submitButton, 10000)
             .click(Page.submitButton)
+            .pause(5000)
+            .url(Page.url)
             .pause(5000)
 
             //Navigate to Fashion
