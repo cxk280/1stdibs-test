@@ -1,11 +1,11 @@
-const dotenv      = require('dotenv').config();
-const webdriverio     = require('webdriverio');
-const chai            = require('chai');
-const should          = chai.should;
-const expect          = chai.expect;
-const PageObject      = require('../pageobjects/page');
-const HomePageObject  = require('../pageobjects/home.page');
-const MainHeadingPageObject  = require('../pageobjects/main.heading.page');
+const dotenv                  = require('dotenv').config();
+const webdriverio             = require('webdriverio');
+const chai                    = require('chai');
+const should                  = chai.should;
+const expect                  = chai.expect;
+const PageObject              = require('../pageobjects/page');
+const HomePageObject          = require('../pageobjects/home.page');
+const MainHeadingPageObject   = require('../pageobjects/main.heading.page');
 
 describe('suite 1 tests', function(){
 
