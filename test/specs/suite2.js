@@ -27,6 +27,7 @@ describe('suite 2 tests', function(){
         return client
 
             //Login
+            //NOTE: the login modal does not work correctly with PhantomJS
             .url(Page.url)
             .waitForVisible(HomePage.loginButton, 10000)
             .click(HomePage.loginButton)
@@ -66,6 +67,7 @@ describe('suite 2 tests', function(){
         return client
 
             //Login
+            //NOTE: the login modal does not work correctly with PhantomJS
             .url(Page.url)
             .waitForVisible(HomePage.loginButton, 10000)
             .click(HomePage.loginButton)
@@ -105,6 +107,7 @@ describe('suite 2 tests', function(){
         return client
 
             //Login
+            //NOTE: the login modal does not work correctly with PhantomJS
             .url(Page.url)
             .waitForVisible(HomePage.loginButton, 10000)
             .click(HomePage.loginButton)
@@ -144,6 +147,7 @@ describe('suite 2 tests', function(){
         return client
 
             //Login
+            //NOTE: the login modal does not work correctly with PhantomJS
             .url(Page.url)
             .waitForVisible(HomePage.loginButton, 10000)
             .click(HomePage.loginButton)
