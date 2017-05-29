@@ -12,4 +12,4 @@ Please note that it seems the front-end team at 1stdibs were transitioning the f
   
 The tests depend on a page object pattern in ES6 and are written in Mocha using a BDD pattern in Chai.  
 
-If you have any questions, please let me know and I will address the matter immediately. Thank you for this opportunity!
+<!-- If you have any questions, please let me know and I will address the matter immediately. Thank you for this opportunity! -->
